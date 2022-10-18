@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Реестр" Width="1130" Height="270">
+    <Grid Margin="97,48,-100,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="146*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="1035*"/>
+            <ColumnDefinition Width="92*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="Reestr" AutoGenerateColumns="False" Grid.ColumnSpan="2" Margin="-97,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="194" Width="1128" Grid.Row="1" SelectionChanged="Reestr_SelectionChanged" CanUserAddRows="True" CanUserDeleteRows="True">уууууууууууууууууууу
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Header="" Width="10"/>
+                <DataGridTextColumn Header="Номер МК"/>
+                <DataGridTextColumn Header="Дата отлова МК"/>
+                <DataGridTextColumn Header="Муницип образование"/>
+                <DataGridTextColumn Header="ОМСУ"/>
+                <DataGridTextColumn Header="Исполнитель МК"/>
+                <DataGridTextColumn Header="Номер заказ-наряда"/>
+                <DataGridTextColumn Header="Населённый пункт"/>
+                <DataGridTextColumn Header="Дата выдачи заказа-наряда"/>
+                <DataGridTextColumn Header="Дата отлова"/>
+                <DataGridTextColumn Header="Цель отлова"/>
+                <DataGridTextColumn Header="Отлов по заявке "/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="-85,-37,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Экспорт Excel" HorizontalAlignment="Left" Margin="3,-37,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Button Content="Экспорт Word" HorizontalAlignment="Left" Margin="118,-37,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button Content="Редактировать" HorizontalAlignment="Left" Margin="240,-37,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+
+    </Grid>
+</Window>
